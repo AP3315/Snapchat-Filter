@@ -1,4 +1,5 @@
 # Snapchat-Filter
-Basically puts Moustache and Glasses on Face in camera
+Basically overlays Moustache and Glasse on Face in camera
+xml files identifies nose and eyes on the face and python script overlays the Moustache and Glasses on the face
 
-May be later
+More to come, later
