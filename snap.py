@@ -13,17 +13,18 @@ while True:
     if(ret==False):
         continue
     
-    # face=facecas.detectMultiScale(frame,1.9,6) 
+    grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # face=facecas.detectMultiScale(grayFrame,1.9,6) 
     # print(face)
 
-    eyes=eyescas.detectMultiScale(frame,1.9,6)
+    eyes=eyescas.detectMultiScale(grayFrame,1.9,6)
     # print(eyes)
     
     # for i in eyes:
     #     cv2.rectangle(frame,(i[0],i[1]),(i[0]+i[3],i[1]+i[2]),(255,255,255),1)
 
 
-    nose=nosecascade.detectMultiScale(frame,1.3,5)
+    nose=nosecascade.detectMultiScale(grayFrame,1.3,5)
     # print(nose)   
 
     # now simply overlay the glasses over the frame captured by webcam, we have starting points (x,y) as (eyes[0][0], eyes[0][1])
